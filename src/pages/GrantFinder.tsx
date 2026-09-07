@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MOCK_GRANTS, calculateMatch } from '../grants'
 import type { UserProfile } from '../grants'
 
@@ -159,6 +160,9 @@ const [profileState, setProfileState] = useState('')
       <p>{grant.funder}</p>
       <p>${grant.amountMin} - ${grant.amountMax}</p>
       <p>Deadline: {grant.deadline}</p>
+      <Link to={`/grants/${grant.id}`} className="view-details-link">
+        View Details
+      </Link>
     </div>
   ))}
 </div>
