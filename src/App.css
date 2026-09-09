@@ -193,3 +193,57 @@ nav a {
 .retake-button:hover {
   background: rgba(212, 175, 55, 0.1);
 }
+/* Transparency page styling */
+.transparency-heading {
+  text-align: center;
+  color: #d4af37;
+}
+
+.transparency-subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 32px;
+}
+
+.award-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.award-card {
+  background: #101c36;
+  border: 1px solid #22314f;
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.award-card h2 {
+  margin: 0 0 8px 0;
+  color: white;
+}
+
+.award-card p {
+  margin: 4px 0;
+  color: #d7dee8;
+}
+
+.award-card h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #d4af37;
+  font-size: 15px;
+}
+
+.award-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.award-card li {
+  color: #d7dee8;
+  margin-bottom: 6px;
+}
