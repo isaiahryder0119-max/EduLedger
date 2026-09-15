@@ -108,3 +108,11 @@ export function calculateMatch(grant: Grant, profile: UserProfile): number {
 
   return Math.round((totalMatched / totalAnswered) * 100)
 }
+export function isGoodFit(percent: number): boolean {
+  return percent >= 60
+}
+export function getMatchClass(percent: number): string {
+  if (percent >= 70) return 'match-high'
+  if (percent >= 40) return 'match-mid'
+  return 'match-low'
+}

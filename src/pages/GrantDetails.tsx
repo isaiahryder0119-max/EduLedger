@@ -22,18 +22,33 @@ function GrantDetails() {
   const matchPercent = profile ? calculateMatch(grant, profile) : null
 
   return (
-    <div>
-      <h1>{grant.name}</h1>
-      <p>{grant.funder}</p>
-      {matchPercent !== null && <p>{matchPercent}% Match</p>}
-      <p>${grant.amountMin} - ${grant.amountMax}</p>
-      <p>Deadline: {grant.deadline}</p>
-      <p>{grant.description}</p>
-      <a href={grant.applicationLink} target="_blank" rel="noopener noreferrer">
-        Apply Now
-      </a>
-      <br />
-      <Link to="/grants">Back to Grant Finder</Link>
+    <div className="page">
+      <h1 className="grant-finder-heading">{grant.name}</h1>
+      <p className="grant-finder-subtitle">{grant.funder}</p>
+
+      <div className="grant-detail-card">
+{matchPercent !== null && (
+  <p className="match-badge">
+    {matchPercent}% Match
+  </p>
+)}
+        <p className="detail-amount">${grant.amountMin} - ${grant.amountMax}</p>
+        <p className="detail-deadline">Deadline: {grant.deadline}</p>
+        <p className="detail-description">{grant.description}</p>
+
+    <a
+          href={grant.applicationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pill-button"
+        >
+          Apply Now
+        </a>
+      </div>
+
+      <Link to="/grants" className="view-details-link">
+        Back to Grant Finder
+      </Link>
     </div>
   )
 }

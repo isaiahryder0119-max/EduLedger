@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { MOCK_GRANTS, calculateMatch } from '../grants'
+import { MOCK_GRANTS, calculateMatch, isGoodFit } from '../grants'
 import type { UserProfile } from '../grants'
 
 function GrantFinder() {
@@ -156,7 +156,9 @@ const [profileState, setProfileState] = useState('')
 }).map((grant) => (
 <div key={grant.id} className="grant-card">
       <h2>{grant.name}</h2>
-      <p className="match-badge">{calculateMatch(grant, profile)}% Match</p>
+      {isGoodFit(calculateMatch(grant, profile)) && (
+        <p className="good-fit-badge">Good Fit</p>
+      )}
       <p>{grant.funder}</p>
       <p>${grant.amountMin} - ${grant.amountMax}</p>
       <p>Deadline: {grant.deadline}</p>

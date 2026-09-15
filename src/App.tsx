@@ -8,11 +8,11 @@ import GrantDetails from './pages/GrantDetails'
 function App() {
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>{' '}
-        <Link to="/grants">Grant Finder</Link>{' '}
-        <Link to="/transparency">Transparency</Link>
-      </nav>
+<nav className="main-nav">
+  <Link to="/">Home</Link>
+  <Link to="/grants">Grant Finder</Link>
+  <Link to="/transparency">Transparency</Link>
+</nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
