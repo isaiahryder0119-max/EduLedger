@@ -50,15 +50,18 @@ nav a {
   max-width: 400px;
 }
 
-.pill-button {
+a.pill-button,
+button.pill-button {
   padding: 20px;
   font-size: 22px;
   font-weight: bold;
   border: none;
   border-radius: 50px;
   background: linear-gradient(to right, #d4af37, #f5e7a3);
-  color: #0a1128;
+  color: #0a1128 !important;
+  text-decoration: none !important;
   cursor: pointer;
+  display: inline-block;
 }
 
 .pill-button {
@@ -352,7 +355,7 @@ p.good-fit-badge {
   margin-top: 8px;
 }
 /* Match percentage badge (details page) */
-.match-badge {
+p.match-badge {
   display: inline-block;
   padding: 5px 14px;
   border-radius: 20px;
@@ -361,4 +364,23 @@ p.good-fit-badge {
   margin-bottom: 8px;
   background: rgba(212, 175, 55, 0.15);
   color: #d4af37 !important;
+}
+/* View Details / Back links styled as buttons */
+a.view-details-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37 !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: bold;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+a.view-details-link:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
 }
