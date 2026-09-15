@@ -1,5 +1,6 @@
 import './App.css'
 import { Routes, Route, Link } from 'react-router-dom'
+import { Home as HomeIcon, Search, BarChart3 } from 'lucide-react'
 import Home from './pages/Home'
 import GrantFinder from './pages/GrantFinder'
 import Transparency from './pages/Transparency'
@@ -9,9 +10,15 @@ function App() {
   return (
     <div>
 <nav className="main-nav">
-  <Link to="/">Home</Link>
-  <Link to="/grants">Grant Finder</Link>
-  <Link to="/transparency">Transparency</Link>
+  <Link to="/">
+    <HomeIcon size={16} /> Home
+  </Link>
+  <Link to="/grants">
+    <Search size={16} /> Grant Finder
+  </Link>
+  <Link to="/transparency">
+    <BarChart3 size={16} /> Transparency
+  </Link>
 </nav>
 
       <Routes>

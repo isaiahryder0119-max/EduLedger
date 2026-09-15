@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Building2, DollarSign, Calendar } from 'lucide-react'
 import { MOCK_GRANTS, calculateMatch, isGoodFit } from '../grants'
 import type { UserProfile } from '../grants'
 
@@ -159,9 +160,9 @@ const [profileState, setProfileState] = useState('')
       {isGoodFit(calculateMatch(grant, profile)) && (
         <p className="good-fit-badge">Good Fit</p>
       )}
-      <p>{grant.funder}</p>
-      <p>${grant.amountMin} - ${grant.amountMax}</p>
-      <p>Deadline: {grant.deadline}</p>
+      <p className="icon-row"><Building2 size={15} /> {grant.funder}</p>
+      <p className="icon-row"><DollarSign size={15} /> ${grant.amountMin} - ${grant.amountMax}</p>
+      <p className="icon-row"><Calendar size={15} /> Deadline: {grant.deadline}</p>
       <Link to={`/grants/${grant.id}`} className="view-details-link">
         View Details
       </Link>
