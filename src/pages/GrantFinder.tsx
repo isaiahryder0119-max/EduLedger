@@ -59,9 +59,9 @@ const [profileState, setProfileState] = useState('')
       School size:
       <select value={profileSchoolSize} onChange={(e) => setProfileSchoolSize(e.target.value)}>
         <option value="">Select...</option>
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
+        <option value="Tier 1">Tier 1</option>
+        <option value="Tier 2">Tier 2</option>
+        <option value="Tier 3">Tier 3</option>
       </select>
     </label>
 

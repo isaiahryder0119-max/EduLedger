@@ -26,7 +26,12 @@ function GrantDetails() {
       <h1 className="grant-finder-heading">{grant.name}</h1>
       <p className="grant-finder-subtitle">{grant.funder}</p>
 
-      <div className="grant-detail-card">
+            <div className="grant-detail-card">
+<img
+  src={grant.imageUrl}
+  alt={grant.imageAlt}
+  className="grant-detail-image"
+/>
 {matchPercent !== null && (
   <p className="match-badge">
     {matchPercent}% Match

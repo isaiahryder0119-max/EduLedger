@@ -33,7 +33,7 @@ function Transparency() {
             <p className="icon-row"><Calendar size={15} /> Date: {award.dateAwarded}</p>
 
                          <h3>How the money was spent:</h3>
-            <p className="chart-hint">Hover over the chart for details</p>
+            <p className="chart-hint">Click or hover over the chart for details</p>
 
             <div className="spending-chart">
               <ResponsiveContainer width="100%" height={200}>

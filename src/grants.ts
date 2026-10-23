@@ -7,7 +7,7 @@ export type Grant = {
   deadline: string // format: 'YYYY-MM-DD'
   subject: string
   eligibility: string
-  description: string
+description: string
   state: string // e.g. 'WA', 'Any' for nationwide
   schoolSize: string // e.g. 'Small', 'Medium', 'Large', 'Any'
   applicationLink: string
@@ -31,7 +31,8 @@ export const MOCK_GRANTS: Grant[] = [
     deadline: '2026-10-15',
     subject: 'STEM',
     eligibility: 'Middle School',
-    description: 'Funding for hands-on science and robotics lab equipment.',
+        description: 'Funding for hands-on science and robotics lab equipment.',
+    
     state: 'Any',
     schoolSize: 'Any',
     applicationLink: 'https://example.com/apply/stem-innovation',

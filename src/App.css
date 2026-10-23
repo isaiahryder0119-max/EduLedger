@@ -333,6 +333,14 @@ p.good-fit-badge {
   text-align: center;
 }
 
+.grant-detail-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
 .grant-detail-card p {
   margin: 8px 0;
   color: #d7dee8;
